@@ -1,0 +1,29 @@
+[0m20:09:10.844268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024446E2F230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024446E2DC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024446E2CC20>]}
+
+
+============================== 20:09:10.847272 | 2e407d86-ee13-4a3a-b9db-d3e54beaf5e7 ==============================
+[0m20:09:10.847272 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:09:10.847272 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\phin_\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:09:49.842903 [debug] [MainThread]: Starter project path: I:\DEV\chess-pipeline\.venv\Lib\site-packages\dbt\include\starter_project
+[0m20:09:49.859902 [info ] [MainThread]: 
+Your new dbt project "dbt_transform" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:09:49.859902 [info ] [MainThread]: Setting up your profile.
+[0m20:11:09.824999 [info ] [MainThread]: Profile dbt_transform written to C:\Users\phin_\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:11:09.826000 [debug] [MainThread]: Command `dbt init` succeeded at 20:11:09.826000 after 119.06 seconds
+[0m20:11:09.826999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000244477A8F80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024471FBBFB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002447421E840>]}
+[0m20:11:09.826999 [debug] [MainThread]: Flushing usage events
+[0m20:11:10.544421 [debug] [MainThread]: An error was encountered while trying to flush usage events
