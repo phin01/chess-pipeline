@@ -1,0 +1,97 @@
+models:
+  - name: stg_chess_puzzles__expanded
+    description: "Staging model for expanded chess puzzles data. Transformed from raw JSON payload to a structured format."
+    columns:
+      - name: puzzle_id
+        description: "Unique identifier for each chess puzzle"
+        tests:
+          - not_null
+          - unique
+
+      - name: average_time
+        description: "Average time taken to solve the chess puzzle"
+        tests:
+          - not_null
+
+      - name: code
+        description: ""
+        tests:
+          - not_null
+
+      - name: correct_move_count
+        description: "Number of moves taken to solve the puzzle correctly"
+        tests:
+          - not_null
+
+      - name: date
+        description: "Date and time when the chess puzzle was played"
+        tests:
+          - not_null
+
+      - name: fen
+        description: "FEN string representing the chess position"
+        tests:
+          - not_null
+
+      - name: flip_board
+        description: "boolean indicating whether the board is flipped"
+        tests:
+          - not_null
+
+      - name: is_passed
+        description: "boolean indicating whether the puzzle was solved correctly"
+        tests:
+          - not_null
+
+      - name: is_provisional
+        description: ""
+        tests:
+          - not_null
+
+      - name: labeled_tags
+        description: "Array of tags associated with the chess puzzle. Can be null"
+
+      - name: move_count
+        description: "Total number of moves played in the chess puzzle. Can be less than correct move count when the puzzle is not solved correctly"
+        tests:
+          - not_null
+
+      - name: my_rating
+        description: "Player's rating at the time of playing the chess puzzle"
+        tests:
+          - not_null
+
+      - name: my_time
+        description: "Time taken by the player to solve the chess puzzle"
+        tests:
+          - not_null
+
+      - name: outcome
+        description: ""
+        tests:
+          - not_null
+
+      - name: rating
+        description: "Difficulty rating of the chess puzzle"
+        tests:
+          - not_null
+
+      - name: rating_change
+        description: "Change in player's rating after playing the chess puzzle"
+        tests:
+          - not_null
+
+      - name: score
+        description: ""
+        tests:
+          - not_null
+
+      - name: target_time
+        description: "Target time to solve the chess puzzle"
+        tests:
+          - not_null
+
+      - name: ingested_at
+        description: "Timestamp when the data was ingested"
+        tests:
+          - not_null
