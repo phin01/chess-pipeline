@@ -9,7 +9,7 @@ models:
           - unique
 
       - name: average_time
-        description: "Average time taken to solve the chess puzzle"
+        description: "Average time taken to solve the chess puzzle in seconds"
         tests:
           - not_null
 
@@ -24,7 +24,7 @@ models:
           - not_null
 
       - name: date
-        description: "Date and time when the chess puzzle was played"
+        description: "Date and time when the chess puzzle was played (UTC)"
         tests:
           - not_null
 
@@ -62,7 +62,7 @@ models:
           - not_null
 
       - name: my_time
-        description: "Time taken by the player to solve the chess puzzle"
+        description: "Time taken by the player to solve the chess puzzle in seconds"
         tests:
           - not_null
 
