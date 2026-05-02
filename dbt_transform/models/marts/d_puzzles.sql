@@ -1,3 +1,5 @@
+{{ config(cluster_by=["puzzle_id"]) }}
+
 select 
     puzzle_id,
     average_time,

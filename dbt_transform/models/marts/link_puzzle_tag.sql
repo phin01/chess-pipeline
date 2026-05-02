@@ -1,4 +1,6 @@
-SELECT
+{{ config(cluster_by=["puzzle_id"]) }}
+
+SELECT DISTINCT
   puzzle_id,
   CASE
     WHEN tag IS NULL OR TRIM(tag) = '' THEN 'No Tag'
