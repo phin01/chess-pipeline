@@ -1,3 +1,5 @@
 .env
 .venv
+.vscode
+example_puzzle.json
 deploy_commands.txt

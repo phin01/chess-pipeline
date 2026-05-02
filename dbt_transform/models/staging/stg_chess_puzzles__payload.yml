@@ -1,0 +1,17 @@
+models:
+  - name: stg_chess_puzzles__payload
+    description: "Staging model for chess puzzles payload data. Deduplicated from raw API data."
+    columns:
+      - name: puzzle_id
+        description: "Unique identifier for each chess puzzle"
+        tests:
+          - not_null
+          - unique
+      - name: payload
+        description: "Raw payload data for the chess puzzle"
+        tests:
+          - not_null
+      - name: ingested_at
+        description: "Timestamp when the data was ingested"
+        tests:
+          - not_null

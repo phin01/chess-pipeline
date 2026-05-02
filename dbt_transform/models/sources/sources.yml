@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: chess_puzzles
+    database: dbt-course-492318
+    tables: 
+      - name: raw_chess_puzzles
+        freshness:
+          warn_after: {count: 5, period: day}
+          error_after: {count: 15, period: day}
+        loaded_at_field: ingested_at
+        config:
+          event_time: ingested_at
+
+        columns:
+          - name: puzzle_id
+            tests:
+              - not_null
+          - name: payload
+            tests:
+              - not_null
+          - name: ingested_at
+            tests:
+              - not_null

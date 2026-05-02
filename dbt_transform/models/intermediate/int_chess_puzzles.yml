@@ -1,0 +1,97 @@
+models:
+  - name: int_chess_puzzles
+    description: "Intermediate model for expanded chess puzzles. Contains all columns relevant for the data marts"
+    columns:
+      - name: puzzle_id
+        description: "Unique identifier for each chess puzzle"
+        tests:
+          - not_null
+          - unique
+
+      - name: average_time
+        description: "Average time taken to solve the chess puzzle in seconds"
+        tests:
+          - not_null
+
+      - name: correct_move_count
+        description: "Number of moves taken to solve the puzzle correctly"
+        tests:
+          - not_null
+
+      - name: fen
+        description: "FEN string representing the chess position"
+        tests:
+          - not_null
+
+      - name: labeled_tags
+        description: "Array of tags associated with the chess puzzle. Can be null"
+
+      - name: puzzle_rating
+        description: "Difficulty rating of the chess puzzle"
+        tests:
+          - not_null
+
+      - name: target_time
+        description: "Target time to solve the chess puzzle"
+        tests:
+          - not_null
+
+      - name: new_rating_system
+        description: "On Oct 09th 2025 chess.com introduced a new rating system. Boolean flag to indicate wheter the puzzle was played under the new system"
+        tests:
+          - not_null
+
+      - name: date_utc
+        description: "Date and time when the chess puzzle was played (UTC)"
+        tests:
+          - not_null
+
+      - name: local_date
+        description: "Date when puzzle was played (based on Sao Paulo local date time)"
+        tests:
+          - not_null
+
+      - name: local_time
+        description: "Time when puzzle was played (based on Sao Paulo local date time)"
+        tests:
+          - not_null
+
+      - name: day_of_week
+        description: "Day of the week when puzzle was played (based on Sao Paulo local date time)"
+        tests:
+          - not_null
+
+      - name: is_passed
+        description: "boolean indicating whether the puzzle was solved correctly"
+        tests:
+          - not_null
+
+      - name: move_count
+        description: "Total number of moves played in the chess puzzle. Can be less than correct move count when the puzzle is not solved correctly"
+        tests:
+          - not_null
+
+      - name: my_rating
+        description: "Player's rating at the time of playing the chess puzzle"
+        tests:
+          - not_null
+
+      - name: my_time
+        description: "Time taken by the player to solve the chess puzzle in seconds"
+        tests:
+          - not_null
+
+      - name: rating_change
+        description: "Change in player's rating after playing the chess puzzle"
+        tests:
+          - not_null
+
+      - name: score
+        description: ""
+        tests:
+          - not_null
+
+      - name: ingested_at
+        description: "Timestamp when the data was ingested"
+        tests:
+          - not_null

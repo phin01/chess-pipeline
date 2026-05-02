@@ -1,0 +1,67 @@
+models:
+  - name: f_puzzle_attempts
+    description: "Fact table with puzzle attempts. Rows represent the date/time, results and rating changes of each attempt"
+    columns:
+      - name: puzzle_id
+        description: "Unique identifier for each chess puzzle"
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('d_puzzles')
+              field: puzzle_id
+
+      - name: date_utc
+        description: "Date and time when the chess puzzle was played (UTC)"
+        tests:
+          - not_null
+
+      - name: local_date
+        description: "Date when puzzle was played (based on Sao Paulo local date time)"
+        tests:
+          - not_null
+
+      - name: local_time
+        description: "Time when puzzle was played (based on Sao Paulo local date time)"
+        tests:
+          - not_null
+
+      - name: day_of_week
+        description: "Day of the week when puzzle was played (based on Sao Paulo local date time)"
+        tests:
+          - not_null
+
+      - name: is_passed
+        description: "boolean indicating whether the puzzle was solved correctly"
+        tests:
+          - not_null
+
+      - name: move_count
+        description: "Total number of moves played in the chess puzzle. Can be less than correct move count when the puzzle is not solved correctly"
+        tests:
+          - not_null
+
+      - name: my_rating
+        description: "Player's rating at the time of playing the chess puzzle"
+        tests:
+          - not_null
+
+      - name: my_time
+        description: "Time taken by the player to solve the chess puzzle in seconds"
+        tests:
+          - not_null
+
+      - name: rating_change
+        description: "Change in player's rating after playing the chess puzzle"
+        tests:
+          - not_null
+
+      - name: score
+        description: ""
+        tests:
+          - not_null
+
+      - name: ingested_at
+        description: "Timestamp when the data was ingested"
+        tests:
+          - not_null
