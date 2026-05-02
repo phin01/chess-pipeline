@@ -33,9 +33,12 @@ models:
   dbt_transform:
     staging:
       +materialized: view
-      +tags: staging
+      +tags: [staging, stg]
     intermediate:
       +materialized: view
-      +tags: intermediate
+      +tags: [intermediate, int]
+    marts:
+      +materialized: view
+      +tags: [marts]
     example:
       +materialized: view
