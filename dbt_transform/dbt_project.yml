@@ -38,7 +38,10 @@ models:
       +materialized: view
       +tags: [intermediate, int]
     marts:
-      +materialized: view
+      +materialized: table
       +tags: [marts]
+    analytics:
+       +materialized: view
+       +tags: [analytics]
     example:
       +materialized: view
