@@ -23,7 +23,7 @@ models:
         tests:
           - not_null
 
-      - name: date
+      - name: date_utc
         description: "Date and time when the chess puzzle was played (UTC)"
         tests:
           - not_null
