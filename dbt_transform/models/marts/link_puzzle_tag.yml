@@ -1,0 +1,14 @@
+models:
+  - name: link_puzzle_tag
+    description: "Link table between puzzles and tags, to support many-to-many relationship"
+    columns:
+      - name: puzzle_id
+        description: "Unique identifier for each chess puzzle"
+        tests:
+          - not_null
+
+      - name: puzzle_tag
+        description: "Name of the tag associated with the chess puzzle. If no tag is present, it will be set to 'No Tag'"
+        data_tests:
+          - not_null
+          - not_empty_string

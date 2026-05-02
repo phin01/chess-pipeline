@@ -1,0 +1,39 @@
+models:
+  - name: d_puzzles
+    description: "Dimension table for chess puzzles, containing puzzle details"
+    columns:
+      - name: puzzle_id
+        description: "Unique identifier for each chess puzzle"
+        tests:
+          - not_null
+          - unique
+
+      - name: average_time
+        description: "Average time taken to solve the chess puzzle in seconds"
+        tests:
+          - not_null
+
+      - name: correct_move_count
+        description: "Number of moves taken to solve the puzzle correctly"
+        tests:
+          - not_null
+
+      - name: fen
+        description: "FEN string representing the chess position"
+        tests:
+          - not_null
+
+      - name: puzzle_rating
+        description: "Difficulty rating of the chess puzzle"
+        tests:
+          - not_null
+
+      - name: target_time
+        description: "Target time to solve the chess puzzle"
+        tests:
+          - not_null
+
+      - name: new_rating_system
+        description: "On Oct 09th 2025 chess.com introduced a new rating system. Boolean flag to indicate wheter the puzzle was played under the new system"
+        tests:
+          - not_null
