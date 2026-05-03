@@ -7,6 +7,6 @@ select
     fen,
     puzzle_rating,
     target_time,
-    new_rating_system
-    
+    new_rating_system,
+    CONCAT(FLOOR(puzzle_rating/100) * 100, '-', FLOOR(puzzle_rating/100) * 100 + 100) as puzzle_range
 from {{ ref('int_chess_puzzles') }}
