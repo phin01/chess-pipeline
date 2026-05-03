@@ -71,9 +71,20 @@ Sample queries for comparison in BI tools
 * Partitioning and clustering in BigQuery
 * Dimensional modeling (star schema + bridge tables)
 
+## Data Visualization (Power BI)
+
+[Chess Performance Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZTE1OTE2ZjctYWE3NC00MWZiLWFmOTYtNjVkYzM1MWRjZTRhIiwidCI6IjcyYzI0NDYzLTAxNGQtNDkwYy05OTU3LWEyZTE5NjEzYmM0YiJ9)
+
+### Main Questions
+
+* How is my performance across different puzzle tags? 
+* How has the puzzle range distribution evolved over time? 
+* Has my performance increased over time within a puzzle range?
+* How are tags distributed across puzzle ranges?
+* Are certain tags over/under represented in given puzzle ranges?
+
 ---
 
 ## Future Improvements
 
 * Include data related to chess matches, not only puzzles
-* BI dashboard for data visualization
